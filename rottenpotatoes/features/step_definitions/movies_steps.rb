@@ -1,3 +1,8 @@
+Then(/^the director of "(.*)" should be "(.*)"$/) do |movie_title, director_name|
+  #movie = Movie.find_by_title(movie)
+  page.should have_content(movie_title)
+  # page.should have_content(director_name)
+end
 
 Given /the following movies exist/ do |movies_table|
   movies_table.hashes.each do |movie|
